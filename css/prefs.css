@@ -1,0 +1,9 @@
+.prefs-form{
+    margin-top: 50px;
+}
+.form-control{
+    width: 40%;
+}
+input#age{
+    width: 33%;
+}

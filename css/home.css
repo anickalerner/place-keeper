@@ -1,0 +1,9 @@
+.jumbotron{
+    background-image: url("/images/map_bg2.jpg");
+}
+
+@media (min-width: 576px){
+.jumbotron {
+    padding: 9rem 2rem;
+}
+}

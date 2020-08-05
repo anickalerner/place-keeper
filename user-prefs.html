@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/prefs.css" rel="stylesheet">
+    <title>Place Keeper - User Preferences</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="user-prefs.html">Preferences <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="map.html">Map</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Your preferences</h1>
+        <p>Here you can choose your preferences for this site's look</p>
+        <section class="prefs-form">
+            <form>
+                <!-- <h2>Colors</h2> -->
+                <div class="form-group">
+                    <label for="bg-color">Home page background color</label>
+
+                    <input type="color" id="bg-color" name="color" value="#d3f1f3" onblur="saveBackgroundColor(this)" />
+
+                    <small id="bgColorHelp" class="form-text text-muted">Please choose a color of the Home page
+                        background</small>
+                </div>
+                <div class="form-group">
+                    <label for="bg-color">Home page font color</label>
+
+                    <input type="color" id="font-color" name="color" value="#000000" onblur="saveFontColor(this)" />
+
+                    <small id="fontColorHelp" class="form-text text-muted">Please choose a color of the Home page
+                        font</small>
+                </div>
+                <!-- <h2>Date of Birth</h2> -->
+                <div class="form-group">
+                    <label for="dob">Date</label>
+
+                    <input type="date" id="dob" name="dob" class="form-control" />
+
+                    <small id="dodHelp" class="form-text text-muted">Your exact date of birth</small>
+                </div>
+                <div class="form-group">
+                    <label for="tob">Time</label>
+
+                    <input type="time" id="tob" name="tob"  class="form-control"/>
+
+                    <small id="tobHelp" class="form-text text-muted">Your exact time of birth</small>
+                </div>
+                <!-- <h2>Email</h2> -->
+                <div class="form-group">
+                    <label for="tob">Email</label>
+
+                    <input type="email" id="email" name="email" required  class="form-control"/>
+
+                    <small id="emailHelp" class="form-text text-muted">Your email</small>
+                </div>
+                <!-- <h2>Age</h2> -->
+                <div class="form-group">
+                    <label for="age">Age</label>
+
+                    <input type="range" id="age" name="age" min="18" max="120" value="26"
+                        onchange="showAge(this.value);" />
+                    <span id="sAge">26</span>
+
+                    <small id="ageHelp" class="form-text text-muted">Choose your age</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </section>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="js/utils.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/user-prefs-controller.js"></script>
+</body>
+
+</html>
